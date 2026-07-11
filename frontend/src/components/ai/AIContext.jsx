@@ -21,43 +21,78 @@ export function AIProvider({ children }) {
   const sendMessage = useCallback(async (text) => {
     if (!text.trim()) return
 
-    const userMessage = { id: crypto.randomUUID(), role: 'user', content: text, timestamp: new Date() }
+    const userMessage = {
+      id: crypto.randomUUID(),
+      role: 'user',
+      content: text,
+      timestamp: new Date(),
+    }
+
     setMessages((prev) => [...prev, userMessage])
     setLoading(true)
 
     try {
       const res = await sendAIMessage(text)
+
       const aiMessage = {
         id: crypto.randomUUID(),
         role: 'assistant',
-        content: res.data.response,
+        content: res.response,
         timestamp: new Date(),
       }
+
       setMessages((prev) => [...prev, aiMessage])
-    } catch {
+    } catch (err) {
+      console.error('AI Error:', err)
+
       const errorMessage = {
         id: crypto.randomUUID(),
         role: 'assistant',
-        content: 'Unable to contact AI Assistant. Please try again.',
+        content:
+          err.response?.data?.detail ||
+          err.message ||
+          'Unable to contact AI Assistant. Please try again.',
         timestamp: new Date(),
         isError: true,
       }
+
       setMessages((prev) => [...prev, errorMessage])
     } finally {
       setLoading(false)
     }
   }, [])
 
-  const clearChat = useCallback(() => setMessages([welcomeMessage]), [])
-  const toggleOpen = useCallback(() => setIsOpen((v) => !v), [])
-  const closeChat = useCallback(() => { setIsOpen(false); setIsMinimized(false) }, [])
-  const toggleMinimize = useCallback(() => setIsMinimized((v) => !v), [])
+  const clearChat = useCallback(() => {
+    setMessages([welcomeMessage])
+  }, [])
+
+  const toggleOpen = useCallback(() => {
+    setIsOpen((v) => !v)
+  }, [])
+
+  const closeChat = useCallback(() => {
+    setIsOpen(false)
+    setIsMinimized(false)
+  }, [])
+
+  const toggleMinimize = useCallback(() => {
+    setIsMinimized((v) => !v)
+  }, [])
 
   return (
-    <AIContext.Provider value={{
-      messages, isOpen, isMinimized, loading,
-      sendMessage, clearChat, toggleOpen, closeChat, toggleMinimize,
-    }}>
+    <AIContext.Provider
+      value={{
+        messages,
+        isOpen,
+        isMinimized,
+        loading,
+        sendMessage,
+        clearChat,
+        toggleOpen,
+        closeChat,
+        toggleMinimize,
+      }}
+    >
       {children}
     </AIContext.Provider>
   )
