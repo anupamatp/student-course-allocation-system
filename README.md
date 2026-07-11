@@ -168,28 +168,28 @@ The built-in AI Assistant supports:
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard Overview](screenshots/dashboard1.png)
+![Dashboard Overview](screenshots/Dashboard1.png)
 
-![Dashboard Analytics](screenshots/dashboard2.png)
-
-![Dashboard with AI Assistant](screenshots/dashboard3.png)
+![Dashboard Analytics](screenshots/Dashboard2.png)
 
 ### Students
-![Students List](screenshots/students1.png)
+![Students List](screenshots/student1.png)
 
-![Add Student](screenshots/students2.png)
+![Add Student](screenshots/student2.png)
 
 ### Courses
-![Courses](screenshots/courses1.png)
+![Courses](screenshots/course11.png)
 
 ### Allocation
-![Allocation](screenshots/allocation1.png)
+![Allocation](screenshots/allocation.png)
 
 ### AI Assistant
-![AI Assistant](screenshots/ai1.png)
+![AI Assistant](screenshots/chat1.png)
+![AI Assistant](screenshots/chat2.png)
 
 ### API Documentation (Swagger)
-![Swagger UI](screenshots/swagger.png)
+![Swagger UI](screenshots/swaggerui1.png)
+![Swagger UI](screenshots/swaggerui2.png)
 
 ---
 
