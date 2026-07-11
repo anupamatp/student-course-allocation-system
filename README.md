@@ -178,7 +178,8 @@ The built-in AI Assistant supports:
 ![Add Student](screenshots/student2.png)
 
 ### Courses
-![Courses](screenshots/course11.png)
+![Courses](screenshots/course1.png)
+![Add Courses](screenshots/course2.png)
 
 ### Allocation
 ![Allocation](screenshots/allocation.png)
