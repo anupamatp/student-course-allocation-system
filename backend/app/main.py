@@ -11,10 +11,15 @@ from app.routers.ai import router as ai_router
 app = FastAPI()
 
 
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=False,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://student-course-allocation-system.vercel.app",
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
