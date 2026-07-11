@@ -165,6 +165,33 @@ The built-in AI Assistant supports:
 - Cloud Deployment
 
 ---
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard Overview](screenshots/dashboard1.png)
+
+![Dashboard Analytics](screenshots/dashboard2.png)
+
+![Dashboard with AI Assistant](screenshots/dashboard3.png)
+
+### Students
+![Students List](screenshots/students1.png)
+
+![Add Student](screenshots/students2.png)
+
+### Courses
+![Courses](screenshots/courses1.png)
+
+### Allocation
+![Allocation](screenshots/allocation1.png)
+
+### AI Assistant
+![AI Assistant](screenshots/ai1.png)
+
+### API Documentation (Swagger)
+![Swagger UI](screenshots/swagger.png)
+
+---
 
 # 👩‍💻 Author
 
