@@ -95,7 +95,17 @@ The application uses a normalized PostgreSQL database to manage students, course
 - Foreign key relationships ensure referential integrity between students, courses, preferences, and allocations.
 
 ---
+## Sample Data
 
+The project includes a database seeding script (`backend/seed.py`) used during development and deployment to populate the application with sample records.
+
+The live application is already initialized with sample:
+
+- Students
+- Courses
+- Student Preferences
+
+Course allocations are generated dynamically when the allocation process is executed.
 ---
 
 # 🚀 Getting Started
