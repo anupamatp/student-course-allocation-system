@@ -76,6 +76,25 @@ student-course-allocation-system
 │
 └── README.md
 ```
+---
+
+# 🗄️ Database Schema
+
+The application uses a normalized PostgreSQL database to manage students, courses, preferences, and allocation results.
+
+### Entity Relationship Diagram
+
+![Database Schema](screenshots/Database_schema.png)
+
+### Database Design
+
+- **Student** stores applicant information including marks, category, and application date.
+- **Course** stores available courses and seat information.
+- **StudentPreference** stores ordered course preferences submitted by each student.
+- **Allocation** stores the final allocation result, allocated preference, and allocation status.
+- Foreign key relationships ensure referential integrity between students, courses, preferences, and allocations.
+
+---
 
 ---
 
